@@ -1,7 +1,7 @@
 {
-  "name": "ireddit",
+  "name": "reddit-images",
   "version": "1.0.0",
-  "description": "A bot that scrape images from reddit",
+  "description": "A reddit scrapper that returns images only from a subbredit.",
   "main": "index.js",
   "scripts": {
     "start": "node ."

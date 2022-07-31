@@ -1,7 +1,7 @@
 import getRandomUserAgent from './getRandomUserAgent.js';
 import axios from 'axios';
 
-const getPosts = async (subreddit, { limit = 1, sort = 'new' } = {}) => {
+const getImages = async (subreddit, { limit = 1, sort = 'new' } = {}) => {
   if (!subreddit) {
     throw new Error('Subreddit argument can not be undefined');
   }
@@ -49,4 +49,4 @@ const getPosts = async (subreddit, { limit = 1, sort = 'new' } = {}) => {
   return images;
 };
 
-export default getPosts;
+export default getImages;
