@@ -23,7 +23,7 @@ const getPosts = async (subreddit, { limit = 1, sort = 'new' } = {}) => {
   for (let post of posts) {
     if (post.data.is_gallery) {
       const galleryImages = post.data.gallery_data.items.map(image => ({
-        id: image.id,
+        id: image.media_id,
         title: post.data.title,
         author: post.data.author,
         isAdult: post.data.over_18,
@@ -33,7 +33,7 @@ const getPosts = async (subreddit, { limit = 1, sort = 'new' } = {}) => {
       }));
 
       images.push(...galleryImages);
-    } else if (!post.data.is_self && post.data.image_hint === 'image') {
+    } else if (!post.data.is_self && post.data.post_hint === 'image') {
       images.push({
         id: post.data.id,
         path: post.data.url,
