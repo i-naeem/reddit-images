@@ -1,3 +1,5 @@
-import getRandomUserAgent from './src/utils/getRandomUserAgent.js';
+import getPosts from './src/utils/getPosts.js';
 
-console.log(getRandomUserAgent());
+const posts = await getPosts('wallpaper', { limit: 20 });
+
+console.log(posts);
